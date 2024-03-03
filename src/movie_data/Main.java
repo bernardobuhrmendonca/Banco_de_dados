@@ -3,17 +3,9 @@ package movie_data;
 import java.util.Scanner;
 
 public class Main {
-    protected Actor[] lista;
-    protected Movie[] lista2;
-    protected Role[] lista3;
-    Main Main;
-    Scanner teclado = new Scanner(System.in);
-
-    public Main(){}
 
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        Main Main = new Main();
+
         Leitor actors;
         actors = new Leitor("C:\\Users\\d22698\\OneDrive - FUNDAÇÃO MOVIMENTO DIREITO E CIDADANIA\\Área de Trabalho\\Documentos\\BANCO DE DADOS\\BANCO DE DADOS - Exercícios\\Ex01\\01-Arquivos CSV\\CSV\\actors.CSV", 4);
         Leitor movies;
