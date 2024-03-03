@@ -70,6 +70,4 @@ public class Leitor {
             System.out.println("IOExcepition.");
         }
     }
-
-
 }
