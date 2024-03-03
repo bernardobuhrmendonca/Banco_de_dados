@@ -1,7 +1,5 @@
 package movie_data;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -72,6 +70,7 @@ public class Main {
                 }
             }
         }
+
         for (Actor actor : lista) {
             if (actor.getGender().equalsIgnoreCase("F")) {
                 System.out.print(actor.getFirst_name() + "    ");
