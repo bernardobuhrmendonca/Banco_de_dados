@@ -71,6 +71,9 @@ public class Main {
             }
         }
 
+        System.out.println("Questão 1:");
+        System.out.println("=========================================================================================");
+
         for (Actor actor : lista) {
             if (actor.getGender().equalsIgnoreCase("F")) {
                 System.out.print(actor.getFirst_name() + "    ");
@@ -79,11 +82,17 @@ public class Main {
             }
         }
 
+        System.out.println("Questão 2:");
+        System.out.println("=========================================================================================");
+
         for (Movie movie : lista2) {
             if (movie.getYear() > 1999) {
                 System.out.println(movie.getName());
             }
         }
+
+        System.out.println("Questão 3:");
+        System.out.println("=========================================================================================");
 
         for (Movie movie : lista2) {
             if (movie.getRank() > 6) {
