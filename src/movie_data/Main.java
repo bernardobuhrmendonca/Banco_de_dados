@@ -22,52 +22,60 @@ public class Main {
         Role[] lista3;
         lista3 = new Role[(role.preenchimento.toArray().length) / 3];
 
+        int cont = 0;
+        int cont2 = 0;
+        int cont3 = 0;
+
         for (Actor item : lista) {
             for (int aux = 0; aux < lista.length; aux++) {
                 if (aux == 0 | aux % 4 == 0) {
                     //id
-                    item.setId(Integer.parseInt(actors.preenchimento.get(aux)));
+                    item.setId(Integer.parseInt(actors.preenchimento.get(cont)));
                 } else if (aux == 1 | (aux - 1) % 4 == 0) {
                     //nome
-                    item.setFirst_name(actors.preenchimento.get(aux));
+                    item.setFirst_name(actors.preenchimento.get(cont));
                 } else if (aux == 2 | (aux - 2) % 4 == 0) {
                     //sobrenome
-                    item.setLast_name(actors.preenchimento.get(aux));
+                    item.setLast_name(actors.preenchimento.get(cont));
                 } else {
                     //genero
-                    item.setGender(actors.preenchimento.get(aux));
+                    item.setGender(actors.preenchimento.get(cont));
                 }
+                cont++;
             }
         }
+
         for (Movie item : lista2) {
             for (int aux = 0; aux < lista2.length; aux++) {
                 if (aux == 0 | aux % 4 == 0) {
                     //id
-                    item.setId(Integer.parseInt(movies.preenchimento.get(aux)));
+                    item.setId(Integer.parseInt(movies.preenchimento.get(cont2)));
                 } else if (aux == 1 | (aux - 1) % 4 == 0) {
                     //nome
                     item.setName(movies.preenchimento.get(aux));
                 } else if (aux == 2 | (aux - 2) % 4 == 0) {
                     //ano
-                    item.setYear(Integer.parseInt(movies.preenchimento.get(aux)));
+                    item.setYear(Integer.parseInt(movies.preenchimento.get(cont2)));
                 } else {
                     //rank
-                    item.setRank(Double.parseDouble(movies.preenchimento.get(aux)));
+                    item.setRank(Double.parseDouble(movies.preenchimento.get(cont2)));
                 }
+                cont2++;
             }
         }
         for (Role item : lista3) {
             for (int aux = 0; aux < lista3.length; aux++) {
                 if (aux == 0 | aux % 3 == 0) {
                     //ator id
-                    item.setActorld(Integer.parseInt(role.preenchimento.get(aux)));
+                    item.setActorld(Integer.parseInt(role.preenchimento.get(cont3)));
                 } else if (aux == 1 | (aux - 1) % 3 == 0) {
                     //filme id
-                    item.setMovieId(Integer.parseInt(role.preenchimento.get(aux)));
+                    item.setMovieId(Integer.parseInt(role.preenchimento.get(cont3)));
                 } else {
                     //papel
-                    item.setRole(role.preenchimento.get(aux));
+                    item.setRole(role.preenchimento.get(cont3));
                 }
+                cont3++;
             }
         }
 
