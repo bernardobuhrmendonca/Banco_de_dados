@@ -20,22 +20,22 @@ public class Main {
         Movie[] lista2;
         lista2 = new Movie[(movies.preenchimento.toArray().length) / 4];
         Role[] lista3;
-        lista3 = new Role[(role.preenchimento.toArray().length) / 4];
+        lista3 = new Role[(role.preenchimento.toArray().length) / 3];
 
         for (Actor item : lista) {
             for (int aux = 0; aux < lista.length; aux++) {
                 if (aux == 0 | aux % 4 == 0) {
                     //id
-                    lista[aux].setId(Integer.parseInt(actors.preenchimento.get(aux)));
+                    item.setId(Integer.parseInt(actors.preenchimento.get(aux)));
                 } else if (aux == 1 | (aux - 1) % 4 == 0) {
                     //nome
-                    lista[aux].setFirst_name(actors.preenchimento.get(aux));
+                    item.setFirst_name(actors.preenchimento.get(aux));
                 } else if (aux == 2 | (aux - 2) % 4 == 0) {
                     //sobrenome
-                    lista[aux].setLast_name(actors.preenchimento.get(aux));
+                    item.setLast_name(actors.preenchimento.get(aux));
                 } else {
                     //genero
-                    lista[aux].setGender(actors.preenchimento.get(aux));
+                    item.setGender(actors.preenchimento.get(aux));
                 }
             }
         }
